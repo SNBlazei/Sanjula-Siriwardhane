@@ -1,0 +1,3 @@
+"homepage": "https://SNBlazei.github.io/Sanjula-Siriwardhane"
+"predeploy": "npm run build"
+"deploy": "gh-pages -d build"
