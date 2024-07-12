@@ -1,5 +1,6 @@
 // App.js
 import React from 'react';
+import { HashRouter } from "react-router-dom";
 import "./App.css";
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -16,19 +17,22 @@ import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <>
-      <Header />
-      <main className='main'>
-        <Home /> 
-        <About/>
-        <Skills/>
-        <Service/>
-        <Projects/>
-      
-        <Contact/>
-      
-      </main>
-      <Footer/>
-      
+      <HashRouter>
+        <Header />
+        <main className='main'>
+          <Home />
+          <About />
+          <Skills />
+          <Service />
+          <Projects />
+
+          <Contact />
+
+        </main>
+        <Footer />
+
+      </HashRouter>
+
     </>
   );
 }
