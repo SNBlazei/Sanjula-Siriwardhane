@@ -1,4 +1,3 @@
-
 import React from "react";
 import './home.css';
 import Social from "./Social";
@@ -9,13 +8,21 @@ function Home() {
     return (
         <>
             <section className="home section" id="home">
-                <div className="home__container container grid">
-                    <div className="home__content grid">
-                        <Social />
-                        <div className="home__img"></div>
-                        <Data />
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-4 col-md-6 order-lg-2 text-center">
+                            <div className="home__img"></div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 order-lg-1 d-flex flex-column align-items-center">
+                            <Social />
+                        </div>
+                        <div className="col-lg-4 col-md-12 order-lg-3 d-flex flex-column align-items-center">
+                            <Data />
+                        </div>
                     </div>
-                    <ScrollDown />
+                    <div className="row justify-content-center">
+                        <ScrollDown />
+                    </div>
                 </div>
             </section>
         </>

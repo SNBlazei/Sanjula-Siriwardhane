@@ -10,6 +10,8 @@ import Service from './Components/services/Service';
 import Projects from './Components/Portfolio/projects';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 /*import ScrollUp from './Components/scrollup/ScrollUp'; */
 

@@ -11,7 +11,7 @@ function Header() {
       if (window.scrollY >= 80) header.classList.add("scroll-header");
       else header.classList.remove("scroll-header");
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -19,80 +19,80 @@ function Header() {
   }, []);
 
   return (
-    <>
-      <header className="header">
-        <nav className="nav container">
-          <a href="index.html" className="nav__logo">
-            Sanjula
-          </a>
+    <header className="header fixed-top bg-body">
+      <nav className="navbar navbar-expand-lg container">
+        <a href="index.html" className="navbar-brand">
+          Sanjula
+        </a>
 
-          <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
-            <ul className="nav__list grid">
-              <li className="nav__item">
-                <a
-                  href="#home"
-                  onClick={() => setActiveNav("#home")}
-                  className={activeNav === "#home" ? "nav__link active-link" : "nav__link"}
-                >
-                  <i className="uil uil-estate nav__icon"></i> Home
-                </a>
-              </li>
-              <li className="nav__item">
-                <a
-                  href="#about"
-                  onClick={() => setActiveNav("#about")}
-                  className={activeNav === "#about" ? "nav__link active-link" : "nav__link"}
-                >
-                  <i className="uil uil-user nav__icon"></i> About
-                </a>
-              </li>
-              <li className="nav__item">
-                <a
-                  href="#skills"
-                  onClick={() => setActiveNav("#skills")}
-                  className={activeNav === "#skills" ? "nav__link active-link" : "nav__link"}
-                >
-                  <i className="uil uil-file-alt nav__icon"></i> Skills
-                </a>
-              </li>
-              <li className="nav__item">
-                <a
-                  href="#services"
-                  onClick={() => setActiveNav("#services")}
-                  className={activeNav === "#services" ? "nav__link active-link" : "nav__link"}
-                >
-                  <i className="uil uil-briefcase-alt nav__icon"></i> Services
-                </a>
-              </li>
-              <li className="nav__item">
-                <a
-                  href="#projects"
-                  onClick={() => setActiveNav("#projects")}
-                  className={activeNav === "#projects" ? "nav__link active-link" : "nav__link"}
-                >
-                  <i className="uil uil-scenery nav__icon"></i> Projects
-                </a>
-              </li>
-              <li className="nav__item">
-                <a
-                  href="#contact"
-                  onClick={() => setActiveNav("#contact")}
-                  className={activeNav === "#contact" ? "nav__link active-link" : "nav__link"}
-                >
-                  <i className="uil uil-message nav__icon"></i> Contact
-                </a>
-              </li>
-            </ul>
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={() => showMenu(!Toggle)}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-            <i className="uil uil-times nav__close" onClick={() => showMenu(!Toggle)}></i>
-          </div>
-
-          <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-            <i className="uil uil-apps"></i>
-          </div>
-        </nav>
-      </header>
-    </>
+        <div className={`collapse navbar-collapse ${Toggle ? "show" : ""}`}>
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a
+                href="#home"
+                onClick={() => setActiveNav("#home")}
+                className={`nav-link ${activeNav === "#home" ? "active" : ""}`}
+              >
+                <i className="uil uil-estate"></i> Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#about"
+                onClick={() => setActiveNav("#about")}
+                className={`nav-link ${activeNav === "#about" ? "active" : ""}`}
+              >
+                <i className="uil uil-user"></i> About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#skills"
+                onClick={() => setActiveNav("#skills")}
+                className={`nav-link ${activeNav === "#skills" ? "active" : ""}`}
+              >
+                <i className="uil uil-file-alt"></i> Skills
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#services"
+                onClick={() => setActiveNav("#services")}
+                className={`nav-link ${activeNav === "#services" ? "active" : ""}`}
+              >
+                <i className="uil uil-briefcase-alt"></i> Services
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#projects"
+                onClick={() => setActiveNav("#projects")}
+                className={`nav-link ${activeNav === "#projects" ? "active" : ""}`}
+              >
+                <i className="uil uil-scenery"></i> Projects
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="#contact"
+                onClick={() => setActiveNav("#contact")}
+                className={`nav-link ${activeNav === "#contact" ? "active" : ""}`}
+              >
+                <i className="uil uil-message"></i> Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
   );
 }
 
