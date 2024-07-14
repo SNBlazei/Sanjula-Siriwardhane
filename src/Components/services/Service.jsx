@@ -32,9 +32,9 @@ function Service() {
                             <div className="services__modal-content">
                                 <i onClick={() => toggleTab(0)} className="bx bx-x services__modal-close"></i>
 
-                                <h3 className="services__modal-title">Product Designer</h3>
+                                <h3 className="services__modal-title">Frontend developer</h3>
                                 <p className="services__modal-description">
-                                    Service with more than 3 years of experience. Providing quality work to clients and companies.
+                                    Service with more than 1 years of experience. Providing quality work to clients and companies.
                                 </p>
 
                                 <ul className="services__modal-services grid">
@@ -152,9 +152,9 @@ function Service() {
                             <div className="services__modal-content">
                                 <i onClick={() => toggleTab(0)} className="bx bx-x services__modal-close"></i>
 
-                                <h3 className="services__modal-title">Visual Designer</h3>
+                                <h3 className="services__modal-title">Backend developer</h3>
                                 <p className="services__modal-description">
-                                    Service with more than 3 years of experience. Providing quality work to clients and companies.
+                                    Service with more than 1 year of experience. Providing quality work to clients and companies.
                                 </p>
 
                                 <ul className="services__modal-services grid">
